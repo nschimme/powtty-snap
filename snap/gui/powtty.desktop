@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=powtty
+Comment=PowTTY
+Exec=powtty
+Icon=${SNAP}/meta/gui/powtty.png
+Categories=Game;
+Terminal=false
+StartupNotify=true
+StartupWMClass=powtty.exe
+Keywords=game

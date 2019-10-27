@@ -1,10 +1,10 @@
 <h1 align="center">
-  <img src="snap/gui/tmnationsforever.png" alt="Track Mania Nations Forever">
+  <img src="snap/gui/powtty.png" alt="PowTTY">
   <br />
-  Track Mania Nations Forever
+  PowTTY: Mud Client for Windows
 </h1>
 
-<p align="center"><b>This is the snap for Track Mania Nations Forever</b>. It works on Ubuntu, Fedora, Debian, and other major Linux
+<p align="center"><b>This is the snap for PowTTY</b>. It works on Ubuntu, Fedora, Debian, and other major Linux
 distributions.</p>
 
 <p align="center">Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with :gift_heart: by Snapcrafters</p>
@@ -15,12 +15,11 @@ distributions.</p>
 
 ## Install
 
-    snap install tmnationsforever --edge
-    snap connect tmnationsforever:joystick
+    snap install powtty
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
-![Track Mania Nations Forever](screenshot.png?raw=true "Track Mania Nations Forever")
+![PowTTY](screenshot.png?raw=true "PowTTY")
 
 ## Reusing this snap
 

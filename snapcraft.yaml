@@ -1,16 +1,10 @@
-name: tmnationsforever
-version: '2.11.26'
-summary: TrackMania Nations Forever
+name: powtty
+version: '1.03'
+summary: PowTTY
 description: |
- The most popular online PC racing game. It fuels 7 different racing
- environments; hundreds of thousands of tracks and millions of players to
- compete with. You can download the car you are dreaming of, paint it, drive it
- through insane tracks made of loopings, ramps and off roads. It is all about
- you, your driving skills and the track in front of you.
- .
- Just to make sure we understand each other: this is pure arcade driving
- madness.
+  PowTTY is a MUD telnet client for PC/Windows, based on both PuTTY (telnet/ssh), and unix-based " powwow " (pure MUD). This combination offers the best of both worlds, being both fast and extremely customizeable, which means that any current powwow settings files can be used seamlessly.
 
+  PowTTY was written with the DIKU-based MUD MUME in mind. 
 grade: stable
 confinement: strict
 architectures:
@@ -19,43 +13,43 @@ architectures:
 base: core
 
 apps:
-  tmnationsforever:
-    command: bin/sommelier "$WINEPREFIX/drive_c/Program Files/TmNationsForever/TmForever.exe"
+  powtty:
+    command: bin/sommelier "$WINEPREFIX/drive_c/powtty.exe"
     environment:
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
       DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
-      INSTALL_URL: "http://files.trackmaniaforever.com/tmnationsforever_setup.exe"
-      VIRTDESKTOP: 1
+      INSTALL_URL: "http://www.elvenrunes.com/powtty/files/powtty.zip"
+      #VIRTDESKTOP: 1
       LC_ALL: "C.UTF-8"
     plugs:
       - desktop
       - desktop-legacy
-      - hardware-observe
+      #- hardware-observe
       - home
-      - joystick
+      #- joystick
       - network
       - network-bind
-      - opengl
+      #- opengl
       - pulseaudio
       - wayland
       - x11
   launcher:
-    command: bin/sommelier "$WINEPREFIX/drive_c/Program Files/TmNationsForever/TmForeverLauncher.exe"
+    command: bin/sommelier "$WINEPREFIX/drive_c/powtty.exe"
     environment:
       WINEPREFIX: "$SNAP_USER_COMMON/.wine"
       DLLOVERRIDES: "mscoree,mshtml=" # Prevent pop-ups about Wine Mono and Wine Gecko
-      INSTALL_URL: "http://files.trackmaniaforever.com/tmnationsforever_setup.exe"
-      VIRTDESKTOP: 1
+      INSTALL_URL: "http://www.elvenrunes.com/powtty/files/powtty.zip"
+      #VIRTDESKTOP: 1
       LC_ALL: "C.UTF-8"
     plugs:
       - desktop
       - desktop-legacy
-      - hardware-observe
+      #- hardware-observe
       - home
-      - joystick
+      #- joystick
       - network
       - network-bind
-      - opengl
+      #- opengl
       - pulseaudio
       - wayland
       - x11
@@ -111,6 +105,7 @@ parts:
     build-packages:
       - dpkg
       - wget
+      - unzip
     override-build: |
       snapcraftctl build
 
